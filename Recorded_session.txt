@@ -1,0 +1,82 @@
+DevOps Master Program Recorded Video
+------------------------------------
+https://www.youtube.com/watch?v=7YmIgFKoITU
+
+
+Session 1 Recorded Video
+------------------------
+
+https://transcripts.gotomeeting.com/#/s/2fa948194b9350eb183fbe3e1c05999f15c8af1e8a75cbdd5ec4465d0101e202
+
+
+Session 2 Recorded Video
+------------------------
+https://transcripts.gotomeeting.com/#/s/c26c92231acbb06f18eae5fb3437ac7308eb226b6065f9ae91a8e0bc5823982a
+
+Session -3
+----------
+https://transcripts.gotomeeting.com/#/s/6a29ed6e9cd90e21186b142dc77c8d33408f7947a1e73379023c8b48e3de845c
+
+Session -4
+----------
+https://transcripts.gotomeeting.com/#/s/c8fd52ce29b79e440b01e84c72e526bfdeea248b426fc224d754831a70378c88
+
+Session -5
+----------
+https://transcripts.gotomeeting.com/#/s/f36dc93bb2027845c25ab41b08e9bab1edf5a12b836db81f5b1382cebf22f815
+
+
+https://transcripts.gotomeeting.com/#/s/4821ad513ae79697e396e8678ea8b7530f0a31245af470d1906ae94ee3cfc320
+
+https://transcripts.gotomeeting.com/#/s/4822da7657ad3cc33545366281ab982d1755ead0063e108ed77e90a7bac48c94
+
+https://transcripts.gotomeeting.com/#/s/a9f1f6144cc4e0b65af318da417b97c58d12cd6718c3ff6ad57e0ea638b3994d	
+
+https://transcripts.gotomeeting.com/#/s/9d5bcf4296ba9f4923ca1f3ec2fd07f4ccc83c330a6b4bffc7ea901decfdbbf0
+
+https://transcripts.gotomeeting.com/#/s/0fa2a6e41869155edec3930127e78c800eada649f9f3c1d787a696a61599c439
+
+
+Shell Script:
+
+Session - 1:
+------------
+https://transcripts.gotomeeting.com/#/s/6e44a5fd586ca5172330978c1bcba761d3d22988577c019a91face012575cf50
+
+
+https://transcripts.gotomeeting.com/#/s/303d9c8c941d549f8d87a35dda746a50c3ece449331f07d5eae5dc0ee61a8fd5
+
+https://transcripts.gotomeeting.com/#/s/ebdb5058274cd44e44b8839c4516f76bb9553333a9186a5187f29c1514d9cfde
+
+https://transcripts.gotomeeting.com/#/s/454a9044e6c97cbb4bb4e959beb65cf73eaae7c74e4a7c86a92e1f8af27650a3
+
+https://transcripts.gotomeeting.com/#/s/44e1fda8f4267d79e3a320a43182ba680708aa1e3cdb8cabe3bbd3d1ea02dd0c
+
+
+GitHub:
+
+Git
+
+GitHub Administration
+----------------------
+https://transcripts.gotomeeting.com/#/s/53e18a1a025309a8764d5a74d2f9ab808879ec982ce680ff8a3620a34deda0cd
+
+Git Commands -1
+---------------
+https://transcripts.gotomeeting.com/#/s/c691884e02430bc8f467b426f7e66c4b216325c0c5b3775545caaebe502d8904
+
+https://transcripts.gotomeeting.com/#/s/8a1136198e1aae92e771ace80a2720e1e257a708c16daf0a02f166b49429cbf5
+
+https://transcripts.gotomeeting.com/#/s/010ebf991cea5d9554a5c407e89be21b0965ee52ed869e151e3fbdf6579cf4cc
+
+https://transcripts.gotomeeting.com/#/s/7ff6dc1da286ddd5ca94984b20cabd0120304c504f3151a587522b994fd87b84
+
+
+https://www.youtube.com/watch?v=7UAEMcYgtCs
+
+https://github.com/mss-ec-apps-test1
+
+HTTP:  https://github.com/mss-ec-apps-test1/Wallmart.git
+SSH :  git@github.com:mss-ec-apps-test1/Wallmart.git
+
+Team Url: https://github.com/orgs/mss-ec-apps-test1/teams/wallmart-devteam
