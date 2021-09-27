@@ -109,16 +109,20 @@ https://transcripts.gotomeeting.com/#/s/a1aa2a583bc9bcc823e99f3a368acfd9d8b0d54b
 
 
 Nexus -1
-
+--------
 https://transcripts.gotomeeting.com/#/s/213d51d959c5e88688db608fbde5981d24f7db74d25dd01690fbdc4841768469
 
 Nexus -2
 --------
 https://transcripts.gotomeeting.com/#/s/e003334f676f6917465cec82de053906818dd497845b2d16f38537bed714aba4
 
+Nexus -3
+--------
+https://transcripts.gotomeeting.com/#/s/d3272cb8d77d37e9451258dd6cd84ca8ac522d1ca9b6e2a9b0492c6706fd9a35
 
-
-
+Jenkins -1
+----------
+https://transcripts.gotomeeting.com/#/s/8370d4a3ca517334244381913c743ef7506a5db07d75d2c15505e570627600fe
 
 
 
