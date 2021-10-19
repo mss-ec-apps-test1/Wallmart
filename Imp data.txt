@@ -24,3 +24,306 @@ This is similar to 401 but authentication is needed to be done by a proxy.
 
 408 Request Timeout
 This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome, Firefox 27+, or IE9, use HTTP pre-connection mechanisms to speed up surfing. Also note that some servers merely shut down the connection without sending this message.
+
+
+AWS: 
+
+Day1: -
+
+CAPEX -> capital expenditure
+OPEX -> operational Expenditure
+
+Datacenter Infrastructure management
+------------------------------------------------------
+1.	Dedicated space
+2.	High bandwidth
+3.	Redundant power supply
+4.	Support Availability
+5.	Leadership Experience
+6.	Time consuming
+7.	Higher maintenance Effort
+8.	Capacity Planning
+
+Business requirement
+-------------------------------
+1.	High Availability
+2.	Fault Tolerant
+3.	Scalability
+4.	Elasticity
+
+Cloud Services
+--------------------
+Services on demand, pay as you go model
+
+Cloud Computing
+------------------------
+Delivery of comuting services like servers, storage, databases etc
+
+Advantage of cloud
+---------------------------
+1.	cost-Effectiveness - Pay as you Go
+2.	scalability and elasticity
+3.	Reliable and High Availability
+4.	speed or Agility
+5.	Deploy globally in minutes
+6.	Security
+
+Types of cloud
+---------------------
+1.	public cloud - AWS, GCP and Microsoft Azure
+2.	private cloud - Openshift and IBM Cloud
+3.	Hybrid cloud
+4.	Multi cloud
+
+
+Cloud Service Models
+------------------------------
+•	On Premises - Networking, Storage, servers, Virtualization , O/s, Middleware, Runtime, Data , Applications(By own)
+•	IAAS - Networking, Storage, servers, Virtualization
+•	PAAS - Networking, Storage, servers, Virtualization , O/s, Middleware, Runtime
+•	SAAS - Networking, Storage, servers, Virtualization , O/s, Middleware, Runtime, Data , Applications
+ 
+Popular Cloud providers
+---------------------------------
+•	AWS
+•	Microsoft Azure
+•	GCP
+•	VMware
+•	IBM Cloud
+•	Oracle Cloud
+•	Rackspace
+•	Redhat
+•	Salesforce
+
+AWS Global Infrastructure
+------------------------------------
+Region - 25, planning 8 more
+Availability Zones - 81, planning 24 more
+
+
+Day2: -
+
+How to choose the right region?
+-------------------------------------------
+•	pricing
+•	End User/Customer Location
+•	Latency (To check the latency https://www.cloudping.info/ or https://ping.psa.fun/ )
+•	Security and Compliance Requirement
+•	Service Availability
+
+EC2 Instance components
+-----------------------------------
+•	AMI's
+•	Instance type
+•	EBS(local storage)
+•	IP Addressing
+•	Security Groups
+•	KEY pair
+
+EC2 Purchasing Option
+----------------------------------
+
+On Demand: -
+------------------
+•	Most expensive purchasing option
+•	Most flexible purchasing option
+•	You are charged only when instance is Running(billed by hour)
+•	You can provision/terminate an instance anytime
+
+Reserved: -
+-----------------
+•	Allows us to purchase an instance for a set time period (1/3 yrs
+•	Significant price discount
+•	Once you buy a reserved instance, we are responsible for the entire price
+•	Regardless of how often we use it
+
+Spot: -
+-----------
+•	Amazon sells the unused instances, for short amount of time at lower price
+•	We can Bid on an instance type & only use when the spot price is equal to or below your bid price
+•	Charged by hour
+•	Spot price fluctuate based on supply & demand in market
+
+
+
+
+Dedicated Instance
+--------------------------
+•	Instances running on hardware that’s dedicated to you. If you stop/start instance, you can get some other hardware somewhere else.
+
+Dedicated host
+---------------------
+•	Physical dedicated server for your use. It’s always the same physical machine for as long as you are paying.
+
+Instance Family & Type
+---------------------------------
+1.	General purpose – balanced memory and CPU (t2, m3, m4)
+2.	Compute optimized – More CPU then RAM (c3, c4, cc2) – C types
+3.	Memory optimized – More RAM – M type and R type
+4.	Storage optimized – Low latency (d2, i2, i3) – D and I type
+5.	Accelerated computing (GPU) – Graphics optimized
+6.	High memory Optimized – High RAM, Nitro system
+7.	Previous generation
+8.	EBS Optimized (Option for higher IOPS performance)
+
+Instance Type Components
+---------------------------------------
+•	Family: Categorizing instance types based on what they are optimized for
+•	Type: subcategory for each family type
+•	vCPUs: number of virtual CPUs the instance type uses
+•	Memory: Amount of RAM the instance type uses
+•	Instance Storage(GB): local instance storage volume(hard drive)
+•	EBS Optimized Available: Indicates if EBS optimization is an option for the instance type
+•	Network Performance: Rating based on its data transfer rate(bandwidth)
+
+Thing you do to select an AMI
+-------------------------------------------
+AMIs come in 2 main categories: -
+1) Community AMIs:
+- Free to use
+- Generally it contains only the OS
+
+2) AWS Marketplace AMIs:
+- pay to use
+- Generally comes packaged with additional licensed software
+
+3) My AMIs:
+- AMIs that you can create yourself
+
+
+
+Security Groups
+-------------------------
+1. Act as a firewall for any EC2 Instance
+2. Control the traffic by Inbound and Outbound rules
+3. Security Group is stateless means you have to configure inbound and outbound separately for any traffic.
+
+Day3: -
+
+IP Address
+-----------
+1. Public IP - Accessible from Internet and will change after restart.
+2. Private IP - Not able to access through Internet. It should be from any class, A, B, C 
+3. Elastic IP - Fixed Public ip and will be chargable.
+
+Storage
+--------
+1. Local storage - temperory - Instance store
+2. EBS Storage
+3. EFS storage
+4. S3
+
+Storage types
+---------------
+1. Block storage - Data store in multiple Block and each block have their inode value - Ex EBS - SSD(GP2/GP3/IO2/IO3) or Magnetic type - root volume - Good performnace for I/O
+2. File storage - Data store in a file - Ex EFS
+3. Object storage - Data store as an object. Each object have their end point - Ex S3
+
+Note:-
+------
+1. We can access or read/write on EBS and EFS after mounting it.
+2. EBS volume and EC2 will be in same AZ if you want to mount EBS to EC2.
+3. The min size value of EBS volume is 1 GB and Max 16384 GB.
+
+Lab: -
+-------
+Create an EC2 Instance and create Volume in same AZ and attach the volume to EC2.Create filesystem on the mounted Volume by mkfs.ext4 /dev/xvdf and then mount any directory to the mounted volume by mount /dev/xvdf /var/lib/jenkins.
+
+Note:-  
+--------
+1. We can not mount one volume simultaneously to multiple EC2.
+2. You can increase the size of the created volume on fly but not able to decrease.
+
+EBS Snapshot
+-------------
+Snapshot is nothing backup of your EBS Volumes.
+
+snapshots can be taken two types: -
+
+1. Manually using AWS GUI, CLI, APIS etc
+   check mark on the volume -> Actions -> Take a snapshot (no need to stop the server)
+2. By creating Lifecycle manager (For periodically based on policy)
+   Life cycle manager -> Specify settings -> On the basis of tags on that volume
+   Target resource type -> volume
+   Target resource tags -> Name and value
+   Schedule details
+
+Restoring: -
+-------------
+In same region -> Actions -> create volume
+In different region - > use Actions -> copy -> Choose Region and then convert the Snapshot to volume in that region.
+
+Lab1:- Take a snapshot of the Jenkins Volume and copy that snapshot to Singapore Region. create an Instance in Singapore Region and install Jenkins, and mount the snapshot after converting to volume to Jenkins EC2
+
+Lab2: - Recovery of Key file
+
+Day5: -
+------- 
+
+Where do EBS snapshots will be stored/maintained by AWS?
+
+EBS snapshots will be maintained in S3 buckets by AWS. But not available in our account.
+
+Shared storage (EFS)
+-------------------------------
+We can mount this storage simultaneously.
+
+EFS - Managed NFS -> you no need to configure NFS, managed by AWS. There is no fixed capacity, it can grow and shrink automatically.
+
+Lab: - Create two EC2 in different AZ. Create EFS storage and share between two.
+
+It can be shared to different AZ, Region or different Account.
+
+Search EFS -> Create file system -> Name, VPC, Availability and Durability (Regional, One zone) - create
+
+It need NFS client or EBS client installed on the system to mount.
+
+Install NFS client on both system
+# yum installl nfs-utils -y
+
+Open the security group port 2049 of shared volume. You can get the SG id from netwrk section of EFS volume.
+
+Mount the volume by below command
+							  
+Amazon FSX client - For windows 
+FSx - For windows
+
+S3: -
+--------
+Object Storage
+Without mounting we can read and write on Object Storage from anywhere.
+
+S3 is perfect place to maintain application static files like images, docs, audios, video file
+S3 is perfect place to maintain application logs and backups.
+
+Netflix Video streaming OTT platform hosted in AWS. 
+
+S3 can be access either GUI, CLI, API, SDKS
+When we upload any object into S3 we will get an endpoint for each and every object uploaded S3.
+Each object will have unique id and endpoints (https URL)
+
+S3 Buckets
+Names should be unique across AWS globally.
+How many S3 buckets we can create in one AWS account by default?
+100 (Soft limit) - can be extended this limit by working with AWS team.
+
+What is the max file capacity or file size limit in S3?
+5TB/5000GB - Maximum size
+
+Lab: - Create a bucket
+Search S3 - create bucket -> Bucket Name, AWS Region, by default blocked public access. Versioning - default Disable- Enable this, Add Tag ->Default Encryption-Disabled - create bucket-> Upload some files.
+
+Within this bucket we can upload and download files. Each and every file have endpoint which you can use in any application.
+
+MAX file size 160GB we can upload through GUI.
+
+We can manage a permission of any object
+-Public access – access throughout internet
+-Bucket policy – Granular level policy (from any source only) –in form of json
+ 
+-ACL - Access control list (You can access within multiple account)
+ 
+
+Can we do S3 replication without versioning enabled? – No
+What is ARN in AWS?
+Amazon Resource Name -Its unique way of identified each resource (service) in AWS

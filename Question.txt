@@ -1,0 +1,54 @@
+Plivo Communications Private Limited  - Banglore
+================================================
+
+Q) what tools you are working on ?
+Q) role of devops engineer?
+Q) explain me about your jenkins stages?
+Q) what is docker ? why we use docker?
+Q) write sample docker file and made me write all docker commands
+Q) what is docker build command and docker run comand ?
+Q) why to use kubernetes ? what are the features?
+Q) how do u get images from private repositories in manifest file ?
+Q) kuberenets volume command ?
+Q) why do u create volumes in kubernetes?
+Q) explain about each tool which you have used ?
+Q) git branching strategy? 
+Q) do u use same docker  image in production also?
+Q) what all you do in github?
+Q) how many branches u have in github?
+Q) how do you fetch particular word in paragraph using shell/linu?
+Q) what all you have done in AWS and tell me about s3?
+Q) If ur root volume of ur server is 99.9% full ? how do u find percentage of largest files and delete it ?
+Q) Find a files which are six days old and delete it ?
+
+1.selfintroduction
+2.u r civil engineer but y u choose DevOps
+3.find Command syntax 
+4.grep command syntax
+5.how to search a particular file in current Directory.
+6.how to search a string.
+7.corntab syntax
+8.give the corntab configaration for 31 st day of October.
+9.syntax of CHMOD
+10.WHAT ARE DEFAULT UMASK VALUES
+11.IN CHMOD WHAT IS 777
+12.IN 777 EACH 7 REPRESENT WHAT AND WHAT ARE THE VALUES FOR READ AND EXICUTE.
+13.WHAT IS THE FIRST LINE IN SHELL SCRIPTING
+14.SHEBANG LINE IS USED FOR.
+15 .IS SHEBANG LINE MANDATORY FOR SCRIPTING
+16.EXPLAIN WHILE LOOP
+17.HOW U WILL EXECUTE THE SHELLSCRIPT
+18.DID U DONE ANY CI/CD PROJECT
+19.HOW TO SEE PARTICULAR LINE WHEN U OPEN A FILE.
+20.WHAT IS DIFFERENCE BETWEEN COMMAND PROMPT AND INSERT MODE.
+21.HOW WILL U IDENTIFY THE DIFFERENCE BETWEEN COMAND PROMPT AND INSERT MODE.
+22.Did u know awk command in Linux.
+23.what are loops in c.
+23.difference between call by vallu and call by reference
+24.what are pointers
+25.difference between = and ==
+26.what are pointers
+27.write a shell script using if else for condition I= 3 and I ==3.
+28.how u initization a value in c
+29.explain one program using call by vallu and call by reference any example.
+30.what happen if we didn't write shebang line in scripting.
