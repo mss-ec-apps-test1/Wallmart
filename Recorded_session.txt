@@ -194,15 +194,109 @@ AWS - 3 - Oct 15th 2021
 
 https://transcripts.gotomeeting.com/#/s/7a32d5038870469e74ee52a03b41d20c44d6c3a4af1b19be285ad49b95620fa8
 
-AWS - 4 - Oct 18th 2021
------------------------
   
-https://transcripts.gotomeeting.com/#/s/c95e745848bb9597008a6430d258e43e90bd6958b38ea336a9e4cdd14ecbebc6 
+AWS 4 - Aug 12th 2021 (old Batch Video EBS Snapshots)
+---------------------------------------------------------------
+ https://transcripts.gotomeeting.com/#/s/bd29e604c02eac02550f5612f768b50d4330548ddd80f0ce4626216952c65422
+
 
 
 AWS - 5 - Oct 19th 2021
 ------------------------
 
 https://transcripts.gotomeeting.com/#/s/23046d45bd5c69c76ba71a3e42aa0fabbc141aa0a466ba7e2bebb64e1cbdf7af
+
+
+AWS 6 - Oct 20th 2021
+---------------------
+
+https://transcripts.gotomeeting.com/#/s/b71b91fd6b1956ddc9c5223c3af45ab5d6334454de87705448c9bc76d35ec6ae
+
+AWS - 7 - Oct 21st 2021
+-----------------------
+
+https://transcripts.gotomeeting.com/#/s/99c7e9ba9eb35e703531ef731ed4bc1533e630abe4ffee0475b3b1380c44c2b2
+
+AWS - 8 - Oct 22nd 2021
+-----------------------
+
+https://transcripts.gotomeeting.com/#/s/b55477296a53a69586999aedb9c85cbc248462d1a71d9c04e019d174615a8cb8
+
+AWS - 9 - Oct 23rd 2021
+------------------------
+
+https://transcripts.gotomeeting.com/#/s/c018a90f3ddf80926a88dc916147cb3e2fb15d55585dfaa9bf6e7cc8edb681b8
+
+AWS - 10 - Oct 25th 2021
+
+https://transcripts.gotomeeting.com/#/s/bde996fbf01576465311ff21d23e0553285e0311076d6c15969c5ce116935fd2
+
+AWS - 11 - Oct 26th 2021
+----------------------------
+
+https://transcripts.gotomeeting.com/#/s/a884340789c73273c3b14e732de6f620e058534b5e12d21dc8bec88160a5944a
+
+AWS - 12 - Oct 27th 2021
+------------------------
+https://transcripts.gotomeeting.com/#/s/357050989f23479dc9f791e8eece1ea8c3892d9e57399de0c36c6025568dcef6
+
+AWS - 13 - Oct 28th 2021
+------------------------
+
+https://transcripts.gotomeeting.com/#/s/c96c01319bc9f76b76a6d4242e3ef27845b7f798111234529ac3767da149da7f
+
+
+
+Docker - 1 - Oct 29th 2021
+--------------------------
+
+https://transcripts.gotomeeting.com/#/s/5caaa528f8d6b0a537ed6ca6e7cef832e46bda791731739b5c33f2dd202c5351
+
+Docker - 2 - Nov 1st 2021
+-------------------------
+https://transcripts.gotomeeting.com/#/s/3257d32d3dd88344216385e3888eeef4f1a4c0680fbb9aa818468eaef1c7bcb9
+
+Docker - 3 - Nov 2nd 2021
+-------------------------
+
+https://transcripts.gotomeeting.com/#/s/9d46176c3dfa9843ffaaec720bf4f132bd00813017b0ad232722e8aaff2f5fea
+
+Docker - 4 - Nov 4th 2021
+-------------------------
+https://transcripts.gotomeeting.com/#/s/be38381ed634242a5ca9818e5e0bbebfcf06dee98c4c072cf82f87f42a14aec4
+
+Docker - 5 - Nov 5th 2021
+-------------------------
+https://transcripts.gotomeeting.com/#/s/bdf6c2e385ddac2e23a3f263d056a1849b85c8dc7d2d5e3510d02686d283178e
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -327,3 +327,348 @@ We can manage a permission of any object
 Can we do S3 replication without versioning enabled? – No
 What is ARN in AWS?
 Amazon Resource Name -Its unique way of identified each resource (service) in AWS
+
+Day6: -
+
+Storage Classes
+----------------------
+By default each object which is upload to S3 maintained in standard Storage class.
+S3 charges is based on the object size and storage class.
+
+1. Standard class -> The files which we are going to access frequently.
+2. IA (Infrequent Access) -> The data is not going to access frequently for cost saving and less performance.
+3. RRS/One zone (Reduced Redundancy Storage) -> Non critical $ Reproducible data. We can store in RSS. Chances to loss of data.
+4. Glacier-> Archival data we can store in glacier with very less price. When we retrieve the data from Glacier it will be chargeable high. It take up to 4 hrs to read the data from Glacier. It is like a historical data.
+
+Object Transition & Expiration can be automate using Object Life Cycle Rules.
+--------------------------------------------------------------------------------------------------------
+Object Lifecycle -> we can transit & move objects from one SC to another SC and also we can set expiration (delete) for the object using Object Life Cycle Rules.
+
+Management -> Lifecycle Rules -> create Lifecycle rules
+1. Name
+2. Choose a rule scope
+3. prefix
+4. tags
+5. Lifecycle rule actions
+
+We can move from one class to another from any specific days or we can delete after some specific days.
+
+To save the cost we implement Life cycle management.
+
+Replication in S3 (Duplicate Copy)
+----------------------------------------------
+management -> replication rules -> create replication rules -> Name, status, source Bucket and scope, Destination and Bucket Name , IAM Role , storage class of replication
+
+Replication should be done in same region as well as in different region.
+Same account same region
+Different Region Same account
+Same Region Different Account
+Different Different Account
+
+Max file size which we can upload in S3?
+5 TB
+
+How many buckets we can create in one account by default?
+100 (Soft limit)
+
+Snow Ball (Device)
+--------------------------
+Data transfer of huge data from in-premises to AWS.
+
+Write a request to AWS or job, they will send device to your data center, you connect that device and copy all data and then the device will be move to AWS data center and then they connect and copy your data.
+
+VPC
+-------
+VPC: - Virtual Private Cloud (Private network)
+Network -> Groups of devices which connected with each other some or the other way using network cables, routers, switches... etc.
+
+LAN -> Local Area Network (Intranet)
+WAN -> Wide Area Network (Internet)
+
+When we create an AWS account by default there will be default vpc will be created for us.
+
+Private Subnet
+Public Subnet
+
+VPC Tool Box
+-------------------
+1. VPC (max 5 VPC in one Account)
+2. Subnets (max 200 subnets in One VPC)
+3. NACL (Network Access Control List)
+4. Routing Table
+5. Internet Gateway
+6. NAT
+
+ELB -> Loadbalancer as a Service
+--------------------------------------------
+
+RDS -> Relational Data Base as a Service
+------------------------------------------------------
+Managed Databases (mysql, Postgres, mariadb etc.)
+
+VPC Types: -
+
+1)	Default VPC
+2)	Custom VPC
+
+Default VPC: -
+•	Created in each AWS Region when an AWS account is created.
+•	Has default CIDR, Security Group, NACL and Route table settings.
+•	Has an Internet Gateway by default.
+
+Custom VPC: -
+•	Is a VPC on AWS Account owner creates.
+•	AWS user creating the custom VPC can decide the CIDR
+•	Has its own default security group, Network ACL and Route Tables.
+•	Does not have an Internet Gateway by default, one needs to be created if needed.
+
+Steps to create a VPC: -
+1)	VPC
+2)	Subnet
+3)	Internet Gateway
+4)	Route Table configuration
+
+Public Subnet: - If a subnet traffic is routed to an Internet Gateway, the subnet is known as a public Subnet. If you want your instance in a public subnet to communicate with the internet over IPV4, it must have a public IPV4 address or an Elastic IP Address.
+
+Private Subnet: - If a subnet does not have a route to the internet Gateway, the subnet is known as a Private Subnet. When you create a VPC, you must specify an IPV4 CIDR Block for the VPC. The allowed block size is between /16 to /28 netmask. The first four and last IP address of Subnet cannot assigned.
+
+For ex: - for Network 10.0.0.0/16
+
+10.0.0.0		Network Address     
+10.0.0.1		Reserved by AWS for the VPC Router
+10.0.0.2		Reserved by AWS for IP address of DNS server
+10.0.0.3		Reserved for Future Use
+10.0.0.255		Broadcast Address
+
+Note: - AWS do not support Broadcast in a VPC but reserve this Address.
+
+Implied or logical Router and Router table: -
+
+	It is the central Routing function
+	It connects the different AZ together and connects the VPC to the Internet gateway.
+	You can have upto 200 Route tables per VPC.
+	You can have upto 50 Routes entries per route table.
+	Each subnet must be associated with only one route table at any given time.
+	If you do not specify a subnet to route table association, the subnet will be associates with the VPC route table.
+	You can also edit the main route table if you need, but you cannot delete main route table.
+	However you can make a custom route table manually become the main Route table then you can delete the former main as it is no longer a main route table
+	You can associate multiple subnets with the same Route table.
+
+Internet Gateway: -
+
+	The Internet Gateway is a virtual router that connects a VPC to the internet.
+	Default VPC is already attached with an Internet gateway.
+	If you create a new VPC then you must attach the Internet Gateway in order to access the Internet.
+	Ensure that your public subnet route table points to the internet gateway.
+	It performs NAT between your private and public IPV4 address.
+	It supports both IPV4 and IPV6.
+
+A Virtual Private Cloud is a Virtual Network that closely resembles a traditional Networking that you operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
+
+OR
+
+VPC is a virtual network or datacenter inside AWS for one client.
+
+•	It is logically isolated from other virtual N/W in the AWS cloud.
+•	Max 5 VPC can be created in one account and 200 subnets in one VPC.
+•	We can allocate max 5 Elastic IP.
+•	Once we created VPC- DHCP, NACL and security group will be automatically created.
+•	A VPC is confined to an AWS region and does not extend between regions.
+
+VPC will create in a Region
+
+•	Subnet will create in AZ and in two AZ subnet will not same
+•	Two VPC may have same CIDR because they are isolate from each other.
+•	Once the VPC is created, you cannot change its CIDR block Range.
+•	If you need a different CIDR size, create a new VPC.
+•	The different subnets within  VPC cannot overlap.
+•	You can however expond your VPC CIDR by adding new/Extra IP address Ranges (Except Gov-cloud and AWS-China)
+
+Components of VPC: -
+
+•	CIDR and Ip Address, Subnets
+	Implied Router and Routing table 
+	Internet Gateway
+	Security Group
+•	Network ACL
+•	Virtual Private gateway
+•	Peering connection
+•	Elastic IP
+
+
+Lab: -
+
+Step 1: - Create two EC2 with User data in two different Private Subnet. This will download through NAT from public network. Open port 8080 also for Network CIDR. If you are create in one subnet then create in different AZ.
+ 
+
+Step2: - Create war of maven-web-application and copy to jump server and then scp to both EC2 in private subnet under tomcat webapps.
+
+Step3: - Configure Target Group , Load Balancer and listener for different-different application
+
+ 
+ 
+Load-balancer: -
+
+Load balancer -> create load balancer -> Network load balancer type -> name -> Scheme - Internet facing -> choose VPC - Mapping AZ and subnet (Min two) -> Listener (protocol, port and default action to target group) -Create a target group in another session protocol tcp port 8080 -> Health check settings -> create and add the servers check mark on include as pending
+
+Loadbalancer - add target group -> create load balancer
+
+Check all parameters of Load balancer and Target group
+
+Access the loadbalancer url. Please allow your ip in SG of EC2 instances.
+
+What is IAM?
+--------------------
+•	IAM allows you to manage users and their level of access to the AWS Console.
+•	IAM user limit is 5000 per AWS account and at a time you can add 10 Users.
+•	1000 IAM roles are limited in one account
+•	IAM User can be a member of 10 groups
+•	Maximum 2 access key can provide to one User.
+•	Permission is assigned to any IAM users by the JSON Policies.
+
+•	Programmatically access (access key and secret access key) – service user to access any service
+•	Interactive login access (user and password) – AWS mgmt. Console login access
+ 
+
+Identity Access Management (IAM) offers the following features:-
+-------------------------------------------------------------------------------------------
+•	Centralized control of your AWS account
+•	Shared Access to your AWS account 
+•	Granular Permissions
+•	Identity Federation (including Active Directory, Facebook, Linkedin etc.)
+•	Multifactor Authentication
+•	Provide temporary access for users/devices and services where necessary
+•	Allows you to set up your own password rotation policy
+•	Integrates with many different AWS services
+•	Supports PCI DSS Compliance
+•	 Your whole AWS security is there:
+•	Users
+•	Groups
+•	Roles
+•	Policies
+•	Root account should never be used (and shared)
+•	Users must be created with proper permissions
+•	IAM is at the center of AWS
+•	Policies are written in JSON (JavaScript Object Notation)
+•	IAM has a global view
+•	Permissions are governed by Policies (JSON)
+•	MFA (Multi Factor Authentication) can be setup
+•	IAM has predefined “managed policies”
+•	It’s best to give users the minimal amount of
+•	Big enterprises usually integrate their own repository of users with IAM
+•	This way, one can login into AWS using their company credentials
+•	Identity Federation uses the SAML standard (Active Directory)
+
+Users: - End Users such as people, employees of an organization etc.
+
+Groups: - A collection of users. Each user in the group will inherit the permission of the group.
+
+Policies: - Policies are made up of documents. These documents are in a format called JSON and they give permission as to what a User/Group Role is able to do.
+
+Roles: - You create roles and then assign them to AWS Resources.
+Roles is the way by which you can use one AWS service to another AWS service. Example that if you want to give access to any EC2 instance to any S3 bucket.
+
+ 
+Roles:-
+
+Roles is the way by which you can use one AWS service to another AWS service. Example that if you want to give access to any EC2 instance to any S3 bucket.
+
+Tips:-
+----------
+•	IAM is universal. It does not apply to regions at this time.
+•	The "root account" is simply the account created when first setup your AWS account. It has complete Admin access.
+•	New Users have NO permissions when first created.
+•	New Users are assigned Access Key ID & Secret Access Keys when first created.
+•	These are not the same as a password. You cannot use the Access key ID & Secret Access Key to Login in to the console. You can use this to access AWS via the APIs and command line, however.
+•	You only get to view these once. If you lose them, you have to regenerate them. So, save them in a secure location. 
+•	Always setup Multifactor Authentication on your root account.
+•	You can create and customize your own password rotation policies.
+•	One IAM User per PHYSICAL PERSON
+•	One IAM Role per Application
+•	IAM credentials should NEVER BE SHARED
+•	Never, ever, ever, ever, write IAM credentials in code. EVER.
+•	And even less, NEVER EVER EVER COMMIT YOUR IAM credentials
+•	Never use the ROOT account except for initial setup.
+•	Never use ROOT IAM Credentials
+
+
+
+Day1: -
+
+Traditinal Deployment
+Virtualized Deployment
+Conatiner Deployment
+
+Difference between container and virtualization
+
+Cgroup
+Namespaces
+
+Day2: -
+
+Containerization Tools
+-----------------------
+Docker - It has very good CLI, API, GUI(community and Enetrprise Edition)
+Container-D
+Podman
+CoreOS
+CIR-O
+Rocket
+
+Container Orchestration Tools
+-----------------------------
+Docker Swarm
+K8s
+Openshift
+Mesios
+
+Docker EE
+---------
+DTR - > Docker Trusted Registry(Repository)
+UCP -> Universal Control Pane (GUI for Docker and Docker swarm)
+
+Why Containers?
+---------------
+QUickly create, ready to run
+Automate testing, integration and packaging
+Support microservices
+Less time to start and light weight
+
+Mirantis Aacquired Docker
+
+Docker Desktop
+----------------
+1. WSL2 backend
+2. Hyperv Enabled
+
+Win10+ 64 bit and 4GB ram
+
+Benifits of Docker
+1. Portable
+2. Cost saving
+3. Scalable
+4. Quick stop and Start
+5. Quick deploy
+6. Light weight
+7. Easy to monitor
+8. Secure
+
+Docker Architecture
+---------------------
+1. Docker client - Docker cli - To send commands/instructions to docker
+2. Docker daemon/engine/server/host/service - take input from User and execute that instructions/commands.
+3. Docker Registry- place to maintain docker images
+   1. Public registory - Docker Hub( central repository for most the softwraes as docker images)- http://hub.docker.com
+   2. Private registory: - Docker registry, Nexus, jfrog, ECR(managed Registry- AWS), DTR, ACR(Azure), GCR(Google cloud) etc.
+Run Docker container
+
+Container: - Container is run time process of your image where your application will be running
+
+Docker Image: - Image is a package (App code+, soft+lib, + configuration)
+
+DockerFile: - Dockerfile is a file having instructions or steps to create an Image.
+
+Lab1: - Create an Linux Instance(Amazon Linux, Centos, Ubuntu/Debian) and install Dokcer Engine
+
+Community Edition officially it wont support Redhat.
+Redhat officially doces not support Docker CE officially.
